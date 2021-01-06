@@ -4,10 +4,11 @@ import Bank.Bank;
 import Cards.GeneralCard;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class controlCardMenu {
-    public void controlCardMenu(ArrayList<GeneralCard> cardList, GeneralCard generalCard) {
+    public void controlCardMenu(HashMap<Integer, GeneralCard> cardList) {
         while (true) {
             Scanner sc = new Scanner(System.in);
             menuList menuList = new menuList();
@@ -23,16 +24,11 @@ public class controlCardMenu {
                         break;
                     }
                     else {
-                        for (var s: cardList) {
-                            System.out.println(s);
-                        }
-                        System.out.println("Информацию по какой карте вы хотите получить?");
+                        ArrayList<GeneralCard> values = new ArrayList<>(cardList.values());
+                        System.out.println(values);
+                        System.out.println("Введите номер карты, информацию по которой хотите получить");
                         var v1 = sc.nextInt();
-                        switch (v1) {
-                            case 1:
-                                System.out.println();
 
-                        }
                     }
 
             }
