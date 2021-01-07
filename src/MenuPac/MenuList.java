@@ -2,12 +2,11 @@ package MenuPac;
 
 import java.util.ArrayList;
 
-public class menuList {
+public class MenuList {
 
     public void viewStartMenu() {
         var startMenu = new ArrayList<>();
         startMenu.add("1.Управление картами");
-        startMenu.add("2.Информация по картам и кошелькам");
         startMenu.add("0.Выход");
 
         for (var s:startMenu) {
@@ -26,6 +25,18 @@ public class menuList {
         }
     }
 
+
+
+
+    public void producerCard() {
+        var prodCard = new ArrayList<>();
+        prodCard.add("1.Visa Card");
+        prodCard.add("2.Maestro Card");
+
+        for (var s: prodCard) {
+            System.out.println(s);
+        }
+    }
 
 
 }
