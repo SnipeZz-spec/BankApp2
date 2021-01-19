@@ -14,6 +14,7 @@ public class controlCardMenu {
         InformationOfCard information = new InformationOfCard();
         CreateNewCard newCard = new CreateNewCard();
         DeleteCard deleteCard = new DeleteCard();
+        FirstMenu firstMenuClass = new FirstMenu();
 
         while (true) {
             Scanner sc = new Scanner(System.in);
@@ -44,10 +45,8 @@ public class controlCardMenu {
                     System.out.println("----------------------------------------");
                     deleteCard.deleteCard(cardList);
                     break;
-
-
-
-
+                case 0:
+                    firstMenuClass.firstMenu();
             }
         }
     }

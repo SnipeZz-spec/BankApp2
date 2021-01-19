@@ -61,10 +61,10 @@ public class GeneralCard {
         System.out.println("Карта: " + name + " " + number);
     }
 
-//    @Override
-//    public String toString() {
-//        return "Карта: " + name + " " + number + "\nМесяц/Год " + month + "/" + year + "\nБаланс:  " + balance;
-//    }
+    @Override
+    public String toString() {
+        return "Карта: " + name + " " + number + "\nМесяц/Год " + month + "/" + year + "\nБаланс:  " + balance;
+    }
 
 
 

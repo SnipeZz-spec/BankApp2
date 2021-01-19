@@ -1,6 +1,8 @@
 package MenuPac.OperationsCard;
 
 import Cards.GeneralCard;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,11 +15,8 @@ public class InformationOfCard {
         }
         else {
             //надо сделать так что бы HashMap корректно выводил
-            for (Map.Entry entry : cardList.entrySet()) {
-                System.out.println(entry);
-            }
-
-
+            ArrayList<GeneralCard> values = new ArrayList<>(cardList.values());
+            System.out.println(values);
         }
 
     }
