@@ -14,8 +14,8 @@ public class FirstMenu {
         System.out.println("Добро пожаловать в мобильный банк!");
         System.out.println("----------------------------------------");
         HashMap<Integer,GeneralCard> allCard = new HashMap<>();
+        allCard.put(12345678,new GeneralCard("Visa", 12345678,12,21,0));
         while (true) {
-            allCard.put(12345678,new GeneralCard("Visa", 12345678,12,21,0));
             Scanner sc = new Scanner(System.in);
             menuList.viewStartMenu();
             int v = sc.nextInt();

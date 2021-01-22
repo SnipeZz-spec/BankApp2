@@ -40,8 +40,8 @@ public class ReplenishmentCard {
                         sc.next();
                     }
                     var sum = sc.nextDouble();
+                    System.out.println("Пополнение на сумму: " + sum + " выполненно успешно!");
                     cardList.get(number).setBalance(cardList.get(number).getBalance() + sum);
-
                 break;
             }
             break;
