@@ -9,7 +9,7 @@ import MenuPac.OperationsCard.InformationOfCard;
 import java.util.*;
 
 public class controlCardMenu {
-    public void controlCardMenu(HashMap<Integer, GeneralCard> cardList) {
+    public void controlCardMenu(CardBase base) {
         ChecksOfInput checkMethod = new ChecksOfInput();
         InformationOfCard information = new InformationOfCard();
         CreateNewCard newCard = new CreateNewCard();
@@ -25,28 +25,28 @@ public class controlCardMenu {
             menuList.viewControlCard();
             switch (checkMethod.checkInt()) {
                 case 1:
-                    if (cardList.isEmpty()) {
+                    if (base.getAllCard().isEmpty()) {
                         System.out.println("У вас пока нет созданных карт");
                         break;
                     }
                     else {
-                        information.infOfCard(cardList);
+                        information.infOfCard(base.getAllCard());
                     }
                     break;
                 case 2:
                     System.out.println("----------------------------------------");
                     System.out.println("----------Создание новой карты----------");
                     System.out.println("----------------------------------------");
-                    newCard.createCard(cardList);
+                    newCard.createCard(base.getAllCard());
                     break;
                 case 3:
                     System.out.println("----------------------------------------");
                     System.out.println("-------------Удаление карты-------------");
                     System.out.println("----------------------------------------");
-                    deleteCard.deleteCard(cardList);
+                    deleteCard.deleteCard(base.getAllCard());
                     break;
                 case 0:
-                    firstMenuClass.firstMenu();
+                    firstMenuClass.firstMenu(base);
             }
         }
     }

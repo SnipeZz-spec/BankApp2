@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class FirstMenu {
-    public void firstMenu() {
+    public void firstMenu(CardBase base) {
         controlCardMenu controlCardMenu = new controlCardMenu();
         ReplenishmentCard replenishmentCard = new ReplenishmentCard();
         MenuList menuList = new MenuList();
@@ -22,10 +22,10 @@ public class FirstMenu {
             int v = sc.nextInt();
             switch (v) {
                 case 1:
-                    controlCardMenu.controlCardMenu(hashMapClass.allCards);
+                    controlCardMenu.controlCardMenu(base);
                     break;
                 case 2:
-                    replenishmentCard.replenishmentCard(hashMapClass.allCards);
+                    replenishmentCard.replenishmentCard(base.getAllCard());
                     break;
             }
 
