@@ -1,6 +1,5 @@
 package MenuPac;
 
-import Cards.GeneralCard;
 import MenuPac.Checks.ChecksOfInput;
 import MenuPac.OperationsCard.CreateNewCard;
 import MenuPac.OperationsCard.DeleteCard;

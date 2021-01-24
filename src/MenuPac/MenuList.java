@@ -8,6 +8,7 @@ public class MenuList {
         var startMenu = new ArrayList<>();
         startMenu.add("1.Управление картами");
         startMenu.add("2.Пополнение карты");
+        startMenu.add("3.Операция перевода");
         startMenu.add("0.Выход");
 
         for (var s:startMenu) {

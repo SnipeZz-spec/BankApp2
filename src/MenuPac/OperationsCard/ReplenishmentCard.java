@@ -25,13 +25,16 @@ public class ReplenishmentCard {
                     sc.next();
                 }
                 var number = sc.nextInt();
-                if (number < 10000000 || number > 99999999) {
+                if (number == 0){
+                    break;
+                }
+                else if (number < 10000000 || number > 99999999) {
                     System.out.println("Некорректное значение! Повторите ввод");
                     continue;
                 }
                 var card = cardNumberList.stream().filter(c -> c.getNumber() == number).findFirst();
                     if (card.isEmpty()) {
-                        System.out.println("Такой карты нет!");
+                        System.out.println("Указанной карты не найдено");
                         continue;
                     }
                     System.out.println("Введите сумму пополнения");
@@ -40,6 +43,9 @@ public class ReplenishmentCard {
                         sc.next();
                     }
                     var sum = sc.nextDouble();
+                    if (sum < 0 || sum == 0) {
+                        System.out.println("Введеная сумма некорректна! Повторите ввод");
+                    }
                     System.out.println("Пополнение на сумму: " + sum + " выполненно успешно!");
                     cardList.get(number).setBalance(cardList.get(number).getBalance() + sum);
                 break;

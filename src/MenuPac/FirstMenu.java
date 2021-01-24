@@ -1,6 +1,7 @@
 package MenuPac;
 
 import Cards.GeneralCard;
+import MenuPac.OperationsCard.RemittanceCard;
 import MenuPac.OperationsCard.ReplenishmentCard;
 
 import java.util.HashMap;
@@ -10,6 +11,7 @@ public class FirstMenu {
     public void firstMenu(CardBase base) {
         controlCardMenu controlCardMenu = new controlCardMenu();
         ReplenishmentCard replenishmentCard = new ReplenishmentCard();
+        RemittanceCard remittanceCard = new RemittanceCard();
         MenuList menuList = new MenuList();
         System.out.println("Добро пожаловать в мобильный банк!");
         System.out.println("----------------------------------------");
@@ -26,6 +28,9 @@ public class FirstMenu {
                     break;
                 case 2:
                     replenishmentCard.replenishmentCard(base.getAllCard());
+                    break;
+                case 3:
+                    remittanceCard.remittanceOperation(base.getAllCard());
                     break;
             }
 
