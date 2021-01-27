@@ -1,6 +1,10 @@
 package MenuPac.Lists;
+import Cards.GeneralCard;
+import MenuPac.OperationsCard.InformationOfCard;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 import java.util.Set;
 
 public class RegularSpendingHash {
@@ -20,4 +24,6 @@ public class RegularSpendingHash {
     public HashMap<Integer, Services> getRegularHashMap() {
         return regularHashMap;
     }
+
+
 }
