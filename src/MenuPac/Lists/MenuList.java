@@ -1,4 +1,4 @@
-package MenuPac;
+package MenuPac.Lists;
 
 import java.util.ArrayList;
 
@@ -9,6 +9,7 @@ public class MenuList {
         startMenu.add("1.Управление картами");
         startMenu.add("2.Пополнение карты");
         startMenu.add("3.Операция перевода");
+        startMenu.add("4.Оплата счетов");
         startMenu.add("0.Выход");
 
         for (var s:startMenu) {
@@ -28,9 +29,6 @@ public class MenuList {
         }
     }
 
-
-
-
     public void producerCard() {
         var prodCard = new ArrayList<>();
         prodCard.add("1.Visa Card");
@@ -40,6 +38,18 @@ public class MenuList {
             System.out.println(s);
         }
     }
+
+    public void billMenuList() {
+        var billList = new ArrayList<>();
+        billList.add("1.Оплата регулярных счетов");
+        billList.add("2.Единоразовая покупка");
+
+        for (var s: billList) {
+            System.out.println(s);
+        }
+    }
+
+
 
 
 }

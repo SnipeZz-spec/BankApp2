@@ -2,9 +2,8 @@ package MenuPac.OperationsCard;
 
 import Cards.GeneralCard;
 import MenuPac.Checks.ChecksOfInput;
-import MenuPac.MenuList;
+import MenuPac.Lists.MenuList;
 
-import java.sql.Struct;
 import java.util.HashMap;
 import java.util.Scanner;
 

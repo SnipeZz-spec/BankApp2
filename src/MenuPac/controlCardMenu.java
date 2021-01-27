@@ -1,6 +1,8 @@
 package MenuPac;
 
 import MenuPac.Checks.ChecksOfInput;
+import MenuPac.Lists.MenuList;
+import MenuPac.Lists.RegularSpendingHash;
 import MenuPac.OperationsCard.CreateNewCard;
 import MenuPac.OperationsCard.DeleteCard;
 import MenuPac.OperationsCard.InformationOfCard;
@@ -8,7 +10,7 @@ import MenuPac.OperationsCard.InformationOfCard;
 import java.util.*;
 
 public class controlCardMenu {
-    public void controlCardMenu(CardBase base) {
+    public void controlCardMenu(CardBase base, RegularSpendingHash hash) {
         ChecksOfInput checkMethod = new ChecksOfInput();
         InformationOfCard information = new InformationOfCard();
         CreateNewCard newCard = new CreateNewCard();
@@ -45,7 +47,7 @@ public class controlCardMenu {
                     deleteCard.deleteCard(base.getAllCard());
                     break;
                 case 0:
-                    firstMenuClass.firstMenu(base);
+                    firstMenuClass.firstMenu(base, hash);
             }
         }
     }
