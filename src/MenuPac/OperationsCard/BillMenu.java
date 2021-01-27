@@ -7,7 +7,6 @@ import MenuPac.Lists.Services;
 import MenuPac.PayOperations.RegularSpending;
 
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class BillMenu {
 
@@ -30,6 +29,7 @@ public class BillMenu {
 
                     break;
                 case 0:
+
                     break;
 
             }

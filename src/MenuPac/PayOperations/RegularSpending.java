@@ -33,7 +33,15 @@ public class RegularSpending {
                     System.out.println("Некорректное значение! Повторите ввод");
                     sc.next();
                 }
-                var numberOfService = sc.nextInt();
+                checks.checkOfCard(cardList); //тут  я получаю баланс карты из метода, написанного в checksOfInput
+                // а вот как его использовать дальше не знаю
+                // тут опишу, что будет дальше:
+                // У меня есть еще одна мапа, где лежит Integer(key) и объект класса(value) - у объекта есть double поле
+                // c ценой услуги. И вот эту сумму мне надо вычитать из баланса, который пришел нам выше.
+                // У меня вот не получается уловить логику ООП в это моменте, как использовать полученые значения.
+                // Не обращай внимание на код ниже
+
+//                var numberOfService = sc.nextInt();
 //                information.infOfCard(cardList);
 //                System.out.println("С какой карты выполнить оплату?");
 //                while (!sc.hasNextInt()) {
@@ -53,21 +61,14 @@ public class RegularSpending {
 //                    System.out.println("Указанной карты не найдено");
 //                    continue;
 //                }
-                else {
-                    var sum = servicesList.get(numberOfService).getCostOfService();
-                    System.out.println(sum);
-                    cardList.get(cardFrom).setBalance(cardList.get(cardFrom).getBalance());
-                    break;
-                }
-
-
-                //я хочу вынести метод выбора карты в отдельный метод.
-                //он написан в классе ChecksOfInput
-                //текст, который закомментирован - это как раз то, что я хочу вынести в отдельный класс
-
-
+//                else {
+//                    var sum = servicesList.get(numberOfService).getCostOfService();
+//                    System.out.println(sum);
+//                    cardList.get(cardFrom).setBalance(cardList.get(cardFrom).getBalance());
+//                    break;
+//                }
             }
-            break;
+
         }
     }
 }
