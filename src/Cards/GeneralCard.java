@@ -1,5 +1,7 @@
 package Cards;
 
+import MenuPac.PayOperations.CheckingCard;
+
 public class GeneralCard {
 
     private String name;
@@ -65,7 +67,5 @@ public class GeneralCard {
     public String toString() {
         return "Карта: " + name + " " + number + "\nМесяц/Год " + month + "/" + year + "\nБаланс:  " + balance;
     }
-
-
 
 }
