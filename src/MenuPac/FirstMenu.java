@@ -1,11 +1,13 @@
 package MenuPac;
 
+import Cards.GeneralCard;
 import MenuPac.Lists.MenuList;
 import MenuPac.Lists.RegularSpendingHash;
 import MenuPac.OperationsCard.BillMenu;
 import MenuPac.OperationsCard.RemittanceCard;
 import MenuPac.OperationsCard.ReplenishmentCard;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class FirstMenu {
@@ -33,7 +35,7 @@ public class FirstMenu {
                     remittanceCard.remittanceOperation(base.getAllCard());
                     break;
                 case 4:
-                    billMenu.billMenu(base.getAllCard(), hash.getRegularHashMap());
+                    billMenu.billMenu(base.getAllCard(), hash.getRegularHashMap(), base);
                     break;
             }
 

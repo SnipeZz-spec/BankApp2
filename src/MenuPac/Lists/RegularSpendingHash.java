@@ -26,4 +26,11 @@ public class RegularSpendingHash {
     }
 
 
+    public double getCostOfService(int numberOfService) {
+        var checkService = regularHashMap.containsKey(numberOfService);
+        if (checkService != false) {
+            return regularHashMap.get(numberOfService).getCostOfService();
+        }
+        return numberOfService;
+    }
 }

@@ -23,4 +23,41 @@ public class CardBase {
     }
 
 
+    public String payOperation(int cardFrom,double balanceOfCard, double sumOfService) {
+        while (true) {
+        if (allCard.get(cardFrom).getBalance() < sumOfService) {
+            System.out.println("На карте недостаточно средств!");
+            break;
+        }
+        System.out.println("Операция выполнена успешно");
+        System.out.println("Сумма списания: " + sumOfService + " рублей");
+        allCard.get(cardFrom).setBalance(allCard.get(cardFrom).getBalance() - sumOfService);
+        break;
+        }
+        return "Операция не была завершена";
+    }
+
+    public double getBalanceOfCard(int cardFrom) {
+        if (checkEnterOfCard(cardFrom)) {
+            var checking = allCard.containsKey(cardFrom);
+            if (checking != false) {
+                return allCard.get(cardFrom).getBalance();
+            }
+            return -1;
+        }
+        return -1;
+    }
+
+    public boolean checkEnterOfCard (int numberOfCard) {
+        while (true) {
+            if (numberOfCard == 0) {
+                return false;
+            }
+            else if (numberOfCard < 10000000 || numberOfCard > 99999999) {
+                System.out.println("Некорректный ввод!");
+                return false;
+            }
+            return true;
+        }
+    }
 }

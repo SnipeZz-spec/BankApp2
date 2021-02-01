@@ -1,6 +1,7 @@
 package MenuPac.OperationsCard;
 
 import Cards.GeneralCard;
+import MenuPac.CardBase;
 import MenuPac.Checks.ChecksOfInput;
 import MenuPac.Lists.MenuList;
 import MenuPac.Lists.Services;
@@ -10,7 +11,7 @@ import java.util.HashMap;
 
 public class BillMenu {
 
-    public void billMenu(HashMap<Integer, GeneralCard> cardList, HashMap<Integer, Services> regularHashMap) {
+    public void billMenu(HashMap<Integer, GeneralCard> cardList, HashMap<Integer, Services> regularHashMap, CardBase base) {
         RegularSpending regularSpending = new RegularSpending();
 
         while (true) {
@@ -23,7 +24,7 @@ public class BillMenu {
             System.out.println("Какой вид оплаты вы хотите совершить?");
             switch (checks.checkInt()) {
                 case 1:
-                    regularSpending.regularSpend(cardList, regularHashMap);
+                    regularSpending.regularSpend(cardList, regularHashMap,base);
                     break;
                 case 2:
 
