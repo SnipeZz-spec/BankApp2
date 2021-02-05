@@ -1,12 +1,12 @@
 package MenuPac;
 
-import MenuPac.Lists.RegularSpendingHash;
+import MenuPac.Lists.PurchasesHashMap;
+
 
 public class MainForCheck {
     public static void main(String[] args) {
-        RegularSpendingHash hash = new RegularSpendingHash();
+        PurchasesHashMap hashMap = new PurchasesHashMap();
 
-        hash.createRegularHash();
-        hash.viewRegularHash();
+        hashMap.viewServiceBase();
     }
 }

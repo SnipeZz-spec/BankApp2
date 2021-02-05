@@ -7,6 +7,8 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class DeleteCard {
+    //раздел удаления карты
+
     public void deleteCard(HashMap<Integer, GeneralCard> cardList) {
         Scanner sc = new Scanner(System.in);
         while (true) {

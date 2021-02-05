@@ -27,6 +27,9 @@ public class Services {
 
     @Override
     public String toString() {
-        return "Услуга " + nameOfService + " Стоимость: " + costOfService + " рублей";
+        return "Услуга: " + nameOfService + " Стоимость: " + costOfService + " рублей";
     }
+
+
+
 }

@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class CreateNewCard {
+    //раздел создания новой карты
+
     public void createCard(HashMap<Integer, GeneralCard> cardList) {
         Scanner sc = new Scanner(System.in);
         ChecksOfInput checks = new ChecksOfInput();

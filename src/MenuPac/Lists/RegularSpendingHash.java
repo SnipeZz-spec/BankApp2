@@ -1,11 +1,8 @@
 package MenuPac.Lists;
-import Cards.GeneralCard;
-import MenuPac.OperationsCard.InformationOfCard;
 
-import java.util.ArrayList;
+
+
 import java.util.HashMap;
-import java.util.Scanner;
-import java.util.Set;
 
 public class RegularSpendingHash {
     HashMap<Integer,Services> regularHashMap = new HashMap<>();
@@ -26,6 +23,14 @@ public class RegularSpendingHash {
     }
 
 
+    public String getNameOfService(int numberOfService) {
+        var getName = regularHashMap.containsValue(numberOfService);
+        if (getName != true) {
+            return regularHashMap.get(numberOfService).getNameOfService();
+        }
+        return "Такой услуги не найдено";
+    }
+
     public double getCostOfService(int numberOfService) {
         var checkService = regularHashMap.containsKey(numberOfService);
         if (checkService != false) {
@@ -33,4 +38,5 @@ public class RegularSpendingHash {
         }
         return numberOfService;
     }
+
 }

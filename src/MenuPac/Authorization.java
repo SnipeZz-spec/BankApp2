@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Authorization {
+    //авторизация
+
     public void Authorization() {
         HashMap<String, String>PassLog = new HashMap<>();
         PassLog.put("Admin", "123456");

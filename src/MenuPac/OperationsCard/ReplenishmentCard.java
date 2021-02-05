@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class ReplenishmentCard {
+    //раздел пополнения карты(банкомат)
+
     public void replenishmentCard (HashMap<Integer, GeneralCard> cardList) {
         InformationOfCard information = new InformationOfCard();
         ArrayList<GeneralCard> cardNumberList = new ArrayList<>(cardList.values());

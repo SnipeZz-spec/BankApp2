@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class RemittanceCard {
+    //раздел перевода средств между картами
 
     public void remittanceOperation(HashMap<Integer, GeneralCard> cardList) {
         ArrayList<GeneralCard> cardNumberList = new ArrayList<>(cardList.values());

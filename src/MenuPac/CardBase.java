@@ -1,16 +1,13 @@
 package MenuPac;
 
 import Cards.GeneralCard;
-import MenuPac.Lists.RegularSpendingHash;
-import MenuPac.Lists.Services;
-import MenuPac.OperationsCard.InformationOfCard;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Optional;
-import java.util.Scanner;
+
 
 public class CardBase {
+    //создание БД с картами
+
     private final HashMap<Integer, GeneralCard> allCard = new HashMap<>();
 
     public void unitDB() {
@@ -27,6 +24,7 @@ public class CardBase {
         while (true) {
         if (allCard.get(cardFrom).getBalance() < sumOfService) {
             System.out.println("На карте недостаточно средств!");
+            System.out.println("Выберите другую карту");
             break;
         }
         System.out.println("Операция выполнена успешно");
@@ -39,25 +37,20 @@ public class CardBase {
 
     public double getBalanceOfCard(int cardFrom) {
         if (checkEnterOfCard(cardFrom)) {
-            var checking = allCard.containsKey(cardFrom);
-            if (checking != false) {
                 return allCard.get(cardFrom).getBalance();
-            }
-            return -1;
         }
         return -1;
     }
 
     public boolean checkEnterOfCard (int numberOfCard) {
-        while (true) {
-            if (numberOfCard == 0) {
+            if (numberOfCard < 10000000 || numberOfCard > 99999999) {
+                System.out.println("Некорректный ввод!");
                 return false;
             }
-            else if (numberOfCard < 10000000 || numberOfCard > 99999999) {
-                System.out.println("Некорректный ввод!");
+            var checking = allCard.containsKey(numberOfCard);
+            if (checking == false) {
                 return false;
             }
             return true;
         }
     }
-}

@@ -1,7 +1,5 @@
 package Cards;
 
-import MenuPac.PayOperations.CheckingCard;
-
 public class GeneralCard {
 
     private String name;

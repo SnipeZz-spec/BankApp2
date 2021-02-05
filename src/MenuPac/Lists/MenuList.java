@@ -3,6 +3,7 @@ package MenuPac.Lists;
 import java.util.ArrayList;
 
 public class MenuList {
+    //класс с листами для меню
 
     public void viewStartMenu() {
         var startMenu = new ArrayList<>();
@@ -10,6 +11,7 @@ public class MenuList {
         startMenu.add("2.Пополнение карты");
         startMenu.add("3.Операция перевода");
         startMenu.add("4.Оплата счетов");
+        startMenu.add("5.Информация об операциях");
         startMenu.add("0.Выход");
 
         for (var s:startMenu) {
