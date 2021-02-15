@@ -16,32 +16,8 @@ public class GeneralCard {
         this.balance = balance;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getNumber() {
         return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
-    public int getMonth() {
-        return month;
-    }
-
-    public void setMonth(int month) {
-        this.month = month;
-    }
-
-    public int getYear() {
-        return year;
     }
 
     public void setYear(int year) {
@@ -57,13 +33,9 @@ public class GeneralCard {
     }
 
 
-    public void infOfCard() {
-        System.out.println("Карта: " + name + " " + number);
-    }
-
     @Override
     public String toString() {
-        return "Карта: " + name + " " + number + "\nМесяц/Год " + month + "/" + year + "\nБаланс:  " + balance;
+        return "Карта: " + name + " " + number + "\nМесяц/Год " + month + "/" + year + "\nБаланс:  " + balance + "р." +"\n";
     }
 
 }

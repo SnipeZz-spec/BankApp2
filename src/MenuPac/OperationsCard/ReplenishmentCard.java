@@ -1,6 +1,7 @@
 package MenuPac.OperationsCard;
 
 import Cards.GeneralCard;
+import MenuPac.Lists.PurchasesHashMap;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,17 +10,17 @@ import java.util.Scanner;
 public class ReplenishmentCard {
     //раздел пополнения карты(банкомат)
 
-    public void replenishmentCard (HashMap<Integer, GeneralCard> cardList) {
+    public void replenishmentCard (HashMap<Integer, GeneralCard> cardList, PurchasesHashMap purchasesHashMap) {
         InformationOfCard information = new InformationOfCard();
         ArrayList<GeneralCard> cardNumberList = new ArrayList<>(cardList.values());
 
         while (true) {
             Scanner sc = new Scanner(System.in);
-            System.out.println("----------------------------------------");
-            System.out.println("-----Вы вошли в меню пополнения карт----");
-            System.out.println("----------------------------------------");
+            System.out.println("------------------------------------------");
+            System.out.println("----- Вы вошли в меню пополнения карт ----");
+            System.out.println("------------------------------------------");
             information.infOfCard(cardList);
-            System.out.println("Введите карту, пополнение которой надо выполнить: ");
+            System.out.println("Введите номер карты, пополнение которой надо выполнить: ");
 
             while (true) {
                 while (!sc.hasNextInt()) {
@@ -48,8 +49,9 @@ public class ReplenishmentCard {
                     if (sum < 0 || sum == 0) {
                         System.out.println("Введеная сумма некорректна! Повторите ввод");
                     }
-                    System.out.println("Пополнение на сумму: " + sum + " выполненно успешно!");
+                    System.out.println("Пополнение на сумму: " + sum + " рублей выполненно успешно!");
                     cardList.get(number).setBalance(cardList.get(number).getBalance() + sum);
+                    purchasesHashMap.putInServiceBase("Пополнение", sum);
                 break;
             }
             break;

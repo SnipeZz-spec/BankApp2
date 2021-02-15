@@ -27,8 +27,9 @@ public class CardBase {
             System.out.println("Выберите другую карту");
             break;
         }
-        System.out.println("Операция выполнена успешно");
+        System.out.println("Операция выполнена успешно!");
         System.out.println("Сумма списания: " + sumOfService + " рублей");
+        System.out.println("Для выхода нажмите: 0");
         allCard.get(cardFrom).setBalance(allCard.get(cardFrom).getBalance() - sumOfService);
         break;
         }

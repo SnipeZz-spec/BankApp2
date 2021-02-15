@@ -21,9 +21,9 @@ public class BillMenu {
         while (true) {
             MenuList menuList = new MenuList();
             ChecksOfInput checks = new ChecksOfInput();
-            System.out.println("----------------------------------------");
-            System.out.println("-----Вы вошли в раздел оплаты счетов----");
-            System.out.println("----------------------------------------");
+            System.out.println("------------------------------------------");
+            System.out.println("----- Вы вошли в раздел оплаты счетов ----");
+            System.out.println("------------------------------------------");
             menuList.billMenuList();
             System.out.println("Какой вид оплаты вы хотите совершить?");
             switch (checks.checkInt()) {
@@ -39,5 +39,4 @@ public class BillMenu {
             break;
         }
     }
-
 }

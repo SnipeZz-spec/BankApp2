@@ -9,7 +9,8 @@ public class PurchasesHashMap {
     HashMap<String, Services> serviceBase = new HashMap<>();
 
 
-    public void putInServiceBase(String numberOfOperation, String nameOfService, double sumOfService) {
+    public void putInServiceBase(String nameOfService, double sumOfService) {
+        var numberOfOperation = randomNumber();
         serviceBase.put(numberOfOperation, new Services(nameOfService, sumOfService));
 
     }
@@ -19,9 +20,9 @@ public class PurchasesHashMap {
         while (true) {
             if (serviceBase.isEmpty()) {
                 System.out.println("У вас пока нет совершенных операций");
-                break;
+                System.out.println(" ");
             }
-            serviceBase.forEach((k, v) -> System.out.println("Номер операции: " + k + " || " + v));
+            serviceBase.forEach((k, v) -> System.out.println("Номер операции: " + k + " || " + v + "\n"));
             break;
         }
     }

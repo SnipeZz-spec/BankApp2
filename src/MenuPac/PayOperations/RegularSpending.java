@@ -54,8 +54,7 @@ public class RegularSpending {
                         continue;
                     }
                     base.payOperation(cardFrom, balanceOfCard, costOfService);
-                    var numberOfOperation =  purchasesHashMap.randomNumber();
-                    purchasesHashMap.putInServiceBase(numberOfOperation,nameOfService,costOfService);
+                    purchasesHashMap.putInServiceBase(nameOfService,costOfService);
                     continue;
                 }
             }

@@ -51,7 +51,7 @@ public class OneTimeSpending {
                     continue;
                 }
                 base.payOperation(cardFrom,balanceOfCard,sumOfService);
-                purchasesHashMap.putInServiceBase(purchasesHashMap.randomNumber(),nameOfService,sumOfService);
+                purchasesHashMap.putInServiceBase(nameOfService,sumOfService);
                 continue;
             }
             break;

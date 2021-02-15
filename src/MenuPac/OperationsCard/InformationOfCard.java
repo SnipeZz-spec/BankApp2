@@ -12,10 +12,10 @@ public class InformationOfCard {
     public void infOfCard(HashMap<Integer, GeneralCard> cardList) {
         if (cardList.isEmpty()) {
             System.out.println("У вас пока нет банковских карт");
+            System.out.println(" ");
         }
         else {
             cardList.forEach((k,v) -> System.out.println(v));
         }
-
     }
 }
